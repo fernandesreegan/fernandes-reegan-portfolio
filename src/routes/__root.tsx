@@ -37,7 +37,7 @@ export const Route = createRootRoute({
           "Fernandes Reegan — DBA with 10+ years of experience in MSSQL, MySQL & PostgreSQL. Performance tuning, automation, and audit-ready database solutions.",
       },
       { name: "author", content: "Fernandes Reegan" },
-      { property: "og:title", content: "Fernandes Reegan — Database Administrator" },
+      { property: "og:title", content: "Fernandes Reegan — Database Administrator & SQL Expert" },
       {
         property: "og:description",
         content:
@@ -45,6 +45,12 @@ export const Route = createRootRoute({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Fernandes Reegan — Database Administrator & SQL Expert" },
+      { name: "description", content: "A professional portfolio website showcasing Fernandes Reegan's expertise as a Database Administrator." },
+      { property: "og:description", content: "A professional portfolio website showcasing Fernandes Reegan's expertise as a Database Administrator." },
+      { name: "twitter:description", content: "A professional portfolio website showcasing Fernandes Reegan's expertise as a Database Administrator." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/eb8dde02-c375-4fe2-b6b8-7602b1127b8b/id-preview-2b9cb2d8--952c79ae-0598-451c-a78f-3d82f0f0da97.lovable.app-1777559870546.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/eb8dde02-c375-4fe2-b6b8-7602b1127b8b/id-preview-2b9cb2d8--952c79ae-0598-451c-a78f-3d82f0f0da97.lovable.app-1777559870546.png" },
     ],
     links: [{ rel: "stylesheet", href: appCss }],
   }),
