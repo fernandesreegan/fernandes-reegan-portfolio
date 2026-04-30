@@ -127,15 +127,7 @@ function HomePage() {
         <div className="relative mx-auto grid max-w-7xl gap-14 px-6 pb-28 pt-20 md:grid-cols-[1.15fr_1fr] md:items-center md:pb-36 md:pt-28">
           {/* LEFT */}
           <div className="animate-fade-up">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.2em] text-white/85 backdrop-blur">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-              </span>
-              Available for new engagements
-            </div>
-
-            <h1 className="mt-6 text-4xl font-bold leading-[1.02] tracking-tight md:text-6xl lg:text-[68px]">
+            <h1 className="text-4xl font-bold leading-[1.02] tracking-tight md:text-6xl lg:text-[68px]">
               Databases, tuned to{" "}
               <span className="relative inline-block">
                 <span
