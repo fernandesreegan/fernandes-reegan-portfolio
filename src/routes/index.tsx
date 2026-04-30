@@ -10,7 +10,7 @@ import {
   Activity,
   CheckCircle2,
 } from "lucide-react";
-import portrait from "../assets/fernandes-portrait.jpg";
+const portrait = "https://i.postimg.cc/BQT4LxDY/Reegan-photo-Picsart-Ai-Image-Enhancer.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
