@@ -46,6 +46,12 @@ const STACK = [
   "Terraform",
   "Linux",
   "Bash",
+  "n8n",
+  "Flowise",
+  "LangChain",
+  "OpenAI API",
+  "Vector DBs",
+  "RAG Pipelines",
 ];
 
 const TYPED_LINES = [
