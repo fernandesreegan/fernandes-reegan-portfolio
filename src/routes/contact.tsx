@@ -32,11 +32,13 @@ const schema = z.object({
 
 function ContactPage() {
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const fd = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const fd = new FormData(form);
     const data = {
       name: String(fd.get("name") ?? ""),
       email: String(fd.get("email") ?? ""),
@@ -52,11 +54,16 @@ function ContactPage() {
       return;
     }
     setErrors({});
-
-    const subject = encodeURIComponent(`Portfolio enquiry from ${parsed.data.name}`);
-    const body = encodeURIComponent(`${parsed.data.message}\n\n— ${parsed.data.name}\n${parsed.data.email}`);
-    window.location.href = `mailto:fernandesreegan@gmail.com?subject=${subject}&body=${body}`;
-    setSent(true);
+    setStatus("sending");
+    setErrorMsg(null);
+    try {
+      await sendContactEmail({ data: parsed.data });
+      setStatus("sent");
+      form.reset();
+    } catch (err) {
+      setStatus("error");
+      setErrorMsg(err instanceof Error ? err.message : "Something went wrong");
+    }
   };
 
   return (
