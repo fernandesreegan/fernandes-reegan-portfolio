@@ -168,19 +168,29 @@ function ContactPage() {
 
           <button
             type="submit"
-            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-md bg-gradient-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-soft transition-smooth hover:shadow-elegant sm:w-auto"
+            disabled={status === "sending"}
+            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-md bg-gradient-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-soft transition-smooth hover:shadow-elegant disabled:opacity-60 sm:w-auto"
           >
-            <Send className="h-4 w-4" />
-            Send message
+            {status === "sending" ? (
+              <Loader2 className="h-4 w-4 animate-spin" />
+            ) : (
+              <Send className="h-4 w-4" />
+            )}
+            {status === "sending" ? "Sending…" : "Send message"}
           </button>
 
-          {sent && (
-            <p className="mt-4 text-sm text-muted-foreground">
-              Opening your email client… if nothing happens, drop me a line at{" "}
+          {status === "sent" && (
+            <p className="mt-4 text-sm text-emerald-600 dark:text-emerald-400">
+              Thanks — your message has been sent. I'll get back to you within one business day.
+            </p>
+          )}
+          {status === "error" && (
+            <p className="mt-4 text-sm text-destructive">
+              Couldn't send your message{errorMsg ? ` (${errorMsg})` : ""}. Please email{" "}
               <a className="font-medium text-primary" href="mailto:fernandesreegan@gmail.com">
                 fernandesreegan@gmail.com
-              </a>
-              .
+              </a>{" "}
+              directly.
             </p>
           )}
         </form>
