@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { z } from "zod";
-import { Mail, Send, MapPin, Clock } from "lucide-react";
+import { Mail, Send, MapPin, Clock, Loader2 } from "lucide-react";
 import { SectionHeader } from "../components/SectionHeader";
+import { sendContactEmail } from "@/lib/contact.functions";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
