@@ -100,7 +100,7 @@ function ContactPage() {
                 fernandesreegan@gmail.com
               </div>
             </div>
-          </a>
+          </button>
 
           <div className="flex items-start gap-4 rounded-2xl border border-border bg-card p-6 shadow-soft">
             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-accent text-accent-foreground">
