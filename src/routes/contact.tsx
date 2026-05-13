@@ -81,9 +81,13 @@ function ContactPage() {
       <div className="mt-14 grid gap-8 md:grid-cols-[1fr_1.3fr]">
         {/* Info card */}
         <div className="flex flex-col gap-4">
-          <a
-            href="mailto:fernandesreegan@gmail.com"
-            className="group flex items-start gap-4 rounded-2xl border border-border bg-card p-6 shadow-soft transition-smooth hover:-translate-y-1 hover:border-primary/40 hover:shadow-elegant"
+          <button
+            type="button"
+            onClick={() => {
+              navigator.clipboard?.writeText("fernandesreegan@gmail.com");
+            }}
+            className="group flex items-start gap-4 rounded-2xl border border-border bg-card p-6 text-left shadow-soft transition-smooth hover:-translate-y-1 hover:border-primary/40 hover:shadow-elegant"
+            title="Click to copy email address"
           >
             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-gradient-primary text-primary-foreground">
               <Mail className="h-5 w-5" />
@@ -96,7 +100,7 @@ function ContactPage() {
                 fernandesreegan@gmail.com
               </div>
             </div>
-          </a>
+          </button>
 
           <div className="flex items-start gap-4 rounded-2xl border border-border bg-card p-6 shadow-soft">
             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-accent text-accent-foreground">
