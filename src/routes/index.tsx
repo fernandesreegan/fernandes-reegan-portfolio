@@ -15,11 +15,11 @@ const portrait = "https://i.postimg.cc/BQT4LxDY/Reegan-photo-Picsart-Ai-Image-En
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Fernandes Reegan — Database Administrator & SQL Expert" },
+      { title: "Fernandes Reegan — Database Administrator Lead | SQL Server & MySQL DBA" },
       {
         name: "description",
         content:
-          "DBA specialising in MSSQL, MySQL & PostgreSQL. Performance tuning, automation, and audit-ready database solutions.",
+          "Database Administrator Lead with 13+ years in SQL Server, MySQL & PostgreSQL — HA/DR, performance tuning, cloud DBA (AWS RDS, Azure SQL), security & observability.",
       },
     ],
   }),
@@ -27,39 +27,39 @@ export const Route = createFileRoute("/")({
 });
 
 const HIGHLIGHTS = [
-  { icon: Database, label: "MSSQL · MySQL · PostgreSQL" },
-  { icon: Gauge, label: "Performance Tuning" },
-  { icon: Shield, label: "Audit-Ready Automation" },
-  { icon: Sparkles, label: "10+ Years Experience" },
+  { icon: Database, label: "SQL Server · MySQL · PostgreSQL" },
+  { icon: Shield, label: "HA/DR · Always On · Replication" },
+  { icon: Gauge, label: "Performance Engineering" },
+  { icon: Sparkles, label: "13+ Years · DBA Lead" },
 ];
 
 const STACK = [
-  "MSSQL",
-  "PostgreSQL",
+  "SQL Server",
   "MySQL",
+  "PostgreSQL",
+  "Always On AG",
+  "Failover Clustering",
+  "Log Shipping",
   "AWS RDS",
+  "AWS Lambda",
+  "AWS Step Functions",
+  "AWS DataSync",
+  "Amazon CloudWatch",
   "Azure SQL",
-  "Redis",
-  "Kafka",
+  "SentryOne",
+  "Percona PMM",
   "Grafana",
-  "pgBackRest",
-  "Terraform",
-  "Linux",
+  "T-SQL",
+  "PowerShell",
   "Bash",
-  "n8n",
-  "Flowise",
-  "LangChain",
-  "OpenAI API",
-  "Vector DBs",
-  "RAG Pipelines",
 ];
 
 const TYPED_LINES = [
   "$ dba --status",
-  "✔ connections: 2,481 / 5,000",
+  "✔ Always On AG: SYNCHRONIZED",
   "✔ avg query: 38ms  (was 4.7s)",
   "✔ replication lag: 12ms",
-  "✔ backups: verified · restorable",
+  "✔ backups: verified · RPO < 5m",
   "$ ready_for_production = true",
 ];
 
@@ -105,7 +105,6 @@ function HomePage() {
     <>
       {/* HERO */}
       <section className="relative isolate overflow-hidden bg-gradient-hero text-primary-foreground">
-        {/* Animated gradient blobs */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute -top-32 -left-24 h-[28rem] w-[28rem] rounded-full bg-sky-500/30 blur-3xl animate-blob" />
           <div
@@ -118,14 +117,10 @@ function HomePage() {
           />
         </div>
 
-        {/* Grid + radial mask */}
         <div className="grid-bg-dark pointer-events-none absolute inset-0 opacity-40 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]" />
-
-        {/* Soft top/bottom vignette */}
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,transparent_40%,oklch(0.10_0.04_260)_95%)]" />
 
         <div className="relative mx-auto grid max-w-7xl gap-14 px-6 pb-28 pt-20 md:grid-cols-[1.15fr_1fr] md:items-center md:pb-36 md:pt-28">
-          {/* LEFT */}
           <div className="animate-fade-up">
             <h1 className="text-4xl font-bold leading-[1.02] tracking-tight md:text-6xl lg:text-[68px]">
               Databases, tuned to{" "}
@@ -137,7 +132,7 @@ function HomePage() {
                       "linear-gradient(110deg, #7dd3fc 10%, #a5b4fc 35%, #f0abfc 55%, #7dd3fc 80%)",
                   }}
                 >
-                  peak performance.
+                  enterprise scale.
                 </span>
                 <svg
                   className="absolute -bottom-2 left-0 h-2 w-full text-sky-400/70"
@@ -157,13 +152,14 @@ function HomePage() {
             </h1>
 
             <p className="mt-4 font-mono text-xs uppercase tracking-[0.22em] text-white/65 md:text-sm">
-              Database Administrator · SQL Expert · Performance Optimization
+              Database Administrator Lead · SQL Server · MySQL · Cloud DBA
             </p>
 
             <p className="mt-6 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
-              I'm <span className="font-semibold text-white">Fernandes Reegan</span> — a DBA with
-              over a decade of experience across MSSQL, MySQL, and PostgreSQL. I build
-              audit-ready, scalable database systems that stay fast under real-world load.
+              I'm <span className="font-semibold text-white">Fernandes Reegan</span> — a Database
+              Administrator Lead with <strong>13+ years</strong> running enterprise SQL Server and
+              MySQL environments. Performance tuning, HA/DR, cloud DBA, security, and 24×7
+              operational excellence.
             </p>
 
             <div className="mt-9 flex flex-wrap gap-3">
@@ -190,7 +186,6 @@ function HomePage() {
               </a>
             </div>
 
-            {/* Glass highlight chips */}
             <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4">
               {HIGHLIGHTS.map(({ icon: Icon, label }) => (
                 <div
@@ -210,21 +205,17 @@ function HomePage() {
             </div>
           </div>
 
-          {/* RIGHT — Portrait + floating cards + terminal */}
           <div className="relative mx-auto w-full max-w-md">
-            {/* Glow halo */}
             <div className="absolute -inset-8 rounded-[2rem] bg-gradient-to-br from-sky-400/30 via-indigo-500/20 to-fuchsia-500/10 blur-3xl" />
 
-            {/* Portrait card */}
             <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-white/5 shadow-elegant backdrop-blur animate-float">
               <img
                 src={portrait}
-                alt="Fernandes Reegan, Database Administrator"
+                alt="Fernandes Reegan, Database Administrator Lead"
                 width={1024}
                 height={1024}
                 className="aspect-[4/5] w-full object-cover"
               />
-              {/* corner brackets */}
               <span className="pointer-events-none absolute left-3 top-3 h-5 w-5 border-l-2 border-t-2 border-sky-300/70" />
               <span className="pointer-events-none absolute right-3 top-3 h-5 w-5 border-r-2 border-t-2 border-sky-300/70" />
               <span className="pointer-events-none absolute left-3 bottom-3 h-5 w-5 border-l-2 border-b-2 border-sky-300/70" />
@@ -241,7 +232,6 @@ function HomePage() {
               </div>
             </div>
 
-            {/* Floating stat card — top left */}
             <div
               className="absolute -left-6 top-10 hidden rounded-xl border border-white/15 bg-white/10 p-3 shadow-elegant backdrop-blur-md md:block animate-float"
               style={{ animationDelay: "-2s" }}
@@ -261,7 +251,6 @@ function HomePage() {
               </div>
             </div>
 
-            {/* Floating mini-terminal — bottom right */}
             <div
               className="absolute -right-4 -bottom-6 hidden w-64 overflow-hidden rounded-xl border border-white/15 bg-[oklch(0.14_0.04_260)/0.85] shadow-elegant backdrop-blur-md md:block animate-float"
               style={{ animationDelay: "-4s" }}
@@ -282,7 +271,6 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Tech stack marquee */}
         <div className="relative border-t border-white/10 bg-white/[0.02] backdrop-blur-sm">
           <div className="mx-auto max-w-7xl px-6 py-5">
             <div className="flex items-center gap-6">
@@ -310,10 +298,10 @@ function HomePage() {
       <section className="border-b border-border bg-surface">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-px bg-border md:grid-cols-4">
           {[
-            ["10+", "Years as DBA"],
-            ["3", "Companies served"],
-            ["3", "RDBMS mastered"],
-            ["100%", "Audit-ready"],
+            ["13+", "Years as DBA"],
+            ["3", "Enterprises served"],
+            ["24×7", "Production ownership"],
+            ["99.99%", "HA uptime delivered"],
           ].map(([stat, label]) => (
             <div key={label} className="bg-surface px-6 py-8 text-center">
               <div className="text-3xl font-bold text-gradient md:text-4xl">{stat}</div>
@@ -336,8 +324,9 @@ function HomePage() {
               I make slow databases <span className="text-gradient">disappear</span>.
             </h2>
             <p className="mt-5 leading-relaxed text-muted-foreground">
-              From query optimisation to deadlock forensics and parallel restore pipelines — I focus on
-              the boring details that let your applications stay fast under real-world load.
+              From query optimisation and execution-plan analysis to Always On Availability Groups,
+              parallel restore pipelines, and audit-ready security — I own the boring details that
+              keep enterprise data fast, safe, and recoverable.
             </p>
             <div className="mt-7 flex gap-3">
               <Link
@@ -362,11 +351,11 @@ function HomePage() {
 SELECT o.*, c.name
 FROM orders o
 JOIN customers c ON c.id = o.customer_id
-WHERE o.created_at > NOW() - INTERVAL '30 day';
+WHERE o.created_at > DATEADD(day,-30,SYSUTCDATETIME());
 
 -- After: 38ms  ✨
-CREATE INDEX CONCURRENTLY idx_orders_created
-  ON orders (created_at DESC)
+CREATE NONCLUSTERED INDEX IX_orders_created
+  ON dbo.orders (created_at DESC)
   INCLUDE (customer_id);`}
             </pre>
           </div>

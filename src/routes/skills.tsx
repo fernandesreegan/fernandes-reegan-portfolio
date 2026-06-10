@@ -2,37 +2,126 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeader } from "../components/SectionHeader";
 import {
   Database, Gauge, Activity, HardDriveDownload, Terminal, Search,
+  Shield, Cloud, Users, LineChart,
 } from "lucide-react";
 
 export const Route = createFileRoute("/skills")({
   head: () => ({
     meta: [
-      { title: "Skills — Fernandes Reegan" },
+      { title: "Skills — Fernandes Reegan | Senior SQL Server & MySQL DBA" },
       {
         name: "description",
         content:
-          "Core DBA skills: SQL query optimization, performance tuning, monitoring, backup & recovery, automation across MSSQL, MySQL and PostgreSQL.",
+          "Enterprise DBA skills: Always On AG, failover clustering, MySQL replication, query tuning, TDE, RBAC, AWS RDS, Azure SQL, SentryOne, PMM, CloudWatch.",
       },
       { property: "og:title", content: "DBA Skills — Fernandes Reegan" },
       {
         property: "og:description",
-        content: "MSSQL · MySQL · PostgreSQL · Tuning · Automation · Backup & Recovery.",
+        content: "SQL Server · MySQL · HA/DR · Cloud DBA · Security · Monitoring.",
       },
     ],
   }),
   component: SkillsPage,
 });
 
-const SKILLS = [
-  { icon: Search, name: "SQL Query Optimization", level: 95, note: "Execution plans, indexing strategy" },
-  { icon: Database, name: "Database Administration", level: 95, note: "MSSQL · MySQL · PostgreSQL" },
-  { icon: Gauge, name: "Performance Tuning", level: 92, note: "Latch, lock & wait analysis" },
-  { icon: Activity, name: "Monitoring & Maintenance", level: 90, note: "Proactive health checks" },
-  { icon: HardDriveDownload, name: "Backup & Recovery", level: 93, note: "PITR · parallel restore" },
-  { icon: Terminal, name: "Automation & Scripting", level: 88, note: "Bash · PowerShell · T-SQL · PL/pgSQL" },
+const CORE = [
+  { icon: Search, name: "Query Optimization & Index Tuning", level: 96, note: "Execution plans, wait stats, deadlock resolution" },
+  { icon: Database, name: "SQL Server & MySQL Administration", level: 96, note: "Install · configure · patch · upgrade" },
+  { icon: Shield, name: "HA/DR — Always On, FCI, Replication", level: 94, note: "RTO/RPO management, DR drills, failover validation" },
+  { icon: Gauge, name: "Performance Engineering", level: 94, note: "T-SQL tuning, partitioning, statistics" },
+  { icon: HardDriveDownload, name: "Backup & Recovery", level: 95, note: "PITR · parallel restore · log shipping" },
+  { icon: Cloud, name: "Cloud DBA — AWS & Azure", level: 90, note: "RDS · Lambda · Step Functions · DataSync · Azure SQL" },
+  { icon: Activity, name: "Monitoring & Observability", level: 92, note: "SentryOne · Percona PMM · CloudWatch · Grafana" },
+  { icon: Terminal, name: "Automation & Scripting", level: 90, note: "T-SQL · PowerShell · Bash · PL/pgSQL" },
+  { icon: Users, name: "DBA Team Leadership", level: 88, note: "Change · incident · problem · SLA management" },
+  { icon: LineChart, name: "Capacity Planning & Schema Design", level: 88, note: "Sizing · partitioning · archival strategy" },
 ];
 
-const STACK = ["MSSQL", "MySQL", "MariaDB", "PostgreSQL", "AWS RDS", "Linux", "PowerShell", "Bash", "T-SQL", "PL/pgSQL", "pg_cron", "Grafana"];
+const GROUPS = [
+  {
+    title: "High Availability & Disaster Recovery",
+    items: [
+      "SQL Server Always On Availability Groups",
+      "Failover Clustering (FCI)",
+      "Database Mirroring",
+      "Log Shipping",
+      "MySQL Replication (Async / Semi-sync / GTID)",
+      "DR Planning · DR Testing · Failover Validation",
+      "RTO / RPO Management",
+    ],
+  },
+  {
+    title: "Security & Compliance",
+    items: [
+      "Transparent Data Encryption (TDE)",
+      "Row-Level Security",
+      "Role-Based Access Control (RBAC)",
+      "User Privilege Auditing",
+      "Data Masking",
+      "Encryption at Rest · Encryption in Transit",
+      "Audit Readiness (SOX · ISO · internal audits)",
+    ],
+  },
+  {
+    title: "Performance Engineering",
+    items: [
+      "Query Optimization · Index Tuning",
+      "Execution Plan Analysis",
+      "Deadlock Resolution",
+      "Wait Statistics Analysis",
+      "Performance Monitoring",
+      "Database Health Checks",
+    ],
+  },
+  {
+    title: "Capacity Planning & Database Design",
+    items: [
+      "Schema Design · Data Modeling",
+      "Capacity Planning · Storage Forecasting",
+      "Database Sizing",
+      "Table Partitioning",
+      "Data Archival Strategy",
+    ],
+  },
+  {
+    title: "Cloud Database Administration",
+    items: [
+      "AWS RDS (SQL Server · MySQL · PostgreSQL)",
+      "AWS Lambda · AWS Step Functions",
+      "AWS DataSync",
+      "Amazon CloudWatch",
+      "Azure SQL Database",
+    ],
+  },
+  {
+    title: "Monitoring & Observability",
+    items: [
+      "SentryOne (SolarWinds SQL Sentry)",
+      "Percona Monitoring & Management (PMM)",
+      "Amazon CloudWatch",
+      "SQL Server Monitoring · MySQL Monitoring",
+      "Alerting & Incident Response",
+    ],
+  },
+  {
+    title: "Leadership & Operations",
+    items: [
+      "DBA Team Leadership",
+      "Change Management · Release Support",
+      "Incident & Problem Management",
+      "Stakeholder Management",
+      "SLA Compliance",
+      "Root Cause Analysis",
+    ],
+  },
+];
+
+const STACK = [
+  "SQL Server", "MySQL", "PostgreSQL", "MariaDB", "Always On AG", "FCI", "Log Shipping",
+  "MySQL Replication", "TDE", "RBAC", "AWS RDS", "AWS Lambda", "AWS Step Functions",
+  "AWS DataSync", "Amazon CloudWatch", "Azure SQL", "SentryOne", "Percona PMM", "Grafana",
+  "T-SQL", "PL/pgSQL", "PowerShell", "Bash", "Linux", "Windows Server",
+];
 
 function SkillsPage() {
   return (
@@ -41,14 +130,14 @@ function SkillsPage() {
         eyebrow="Skills"
         title={
           <>
-            Built for <span className="text-gradient">large-scale</span> relational systems.
+            Built for <span className="text-gradient">enterprise</span> SQL Server &amp; MySQL.
           </>
         }
-        description="A focused toolkit refined over a decade of running production databases under real workloads."
+        description="A focused, ATS-aligned toolkit refined over 13+ years of running mission-critical relational databases under real workloads."
       />
 
       <div className="mt-14 grid gap-5 md:grid-cols-2">
-        {SKILLS.map(({ icon: Icon, name, level, note }) => (
+        {CORE.map(({ icon: Icon, name, level, note }) => (
           <div
             key={name}
             className="group rounded-2xl border border-border bg-card p-6 shadow-soft transition-smooth hover:-translate-y-1 hover:shadow-elegant"
@@ -71,6 +160,24 @@ function SkillsPage() {
                 style={{ width: `${level}%` }}
               />
             </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-16 grid gap-6 md:grid-cols-2">
+        {GROUPS.map((g) => (
+          <div key={g.title} className="rounded-2xl border border-border bg-card p-6 shadow-soft">
+            <h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-primary">
+              {g.title}
+            </h3>
+            <ul className="mt-4 space-y-2 text-sm text-foreground/85">
+              {g.items.map((i) => (
+                <li key={i} className="flex gap-2">
+                  <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-primary" />
+                  <span>{i}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
