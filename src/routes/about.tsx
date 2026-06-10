@@ -1,20 +1,20 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { GraduationCap, Briefcase, Heart, ArrowRight } from "lucide-react";
+import { GraduationCap, Briefcase, Heart, ArrowRight, ShieldCheck } from "lucide-react";
 import { SectionHeader } from "../components/SectionHeader";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Fernandes Reegan" },
+      { title: "About — Fernandes Reegan | Database Administrator Lead" },
       {
         name: "description",
         content:
-          "Background, education, and journey of Fernandes Reegan — a Database Administrator with 10+ years optimizing relational databases.",
+          "Database Administrator Lead with 13+ years across SQL Server, MySQL & PostgreSQL — HA/DR, performance tuning, cloud DBA, security and 24×7 operations.",
       },
-      { property: "og:title", content: "About Fernandes Reegan" },
+      { property: "og:title", content: "About Fernandes Reegan — DBA Lead" },
       {
         property: "og:description",
-        content: "10+ years as a DBA. B.Sc Mathematics, MCA from St. Joseph's College.",
+        content: "13+ years owning enterprise SQL Server & MySQL estates.",
       },
     ],
   }),
@@ -28,10 +28,10 @@ function AboutPage() {
         eyebrow="About"
         title={
           <>
-            A decade of <span className="text-gradient">data discipline.</span>
+            13+ years of <span className="text-gradient">enterprise DBA leadership.</span>
           </>
         }
-        description="I've spent the last 10+ years living inside relational databases — tuning queries, taming deadlocks, and building automation that holds up under audit."
+        description="Database Administrator Lead specialising in SQL Server and MySQL — performance engineering, high availability and disaster recovery, cloud database administration, security &amp; compliance, monitoring, automation, and operational excellence."
       />
 
       <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -41,8 +41,20 @@ function AboutPage() {
           </div>
           <h3 className="mt-5 text-base font-semibold">Career</h3>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            Started <span className="font-medium text-foreground">May 14, 2013</span>. 10+ years across
-            three organizations, currently serving in my third.
+            Since <span className="font-medium text-foreground">May 2013</span>. 13+ years across
+            three enterprises — currently <span className="font-medium text-foreground">DBA Lead</span>{" "}
+            at vThink Global Technologies.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-border bg-card p-6 shadow-soft transition-smooth hover:-translate-y-1 hover:shadow-elegant">
+          <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-primary text-primary-foreground">
+            <ShieldCheck className="h-5 w-5" />
+          </div>
+          <h3 className="mt-5 text-base font-semibold">Focus</h3>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            SQL Server Always On AG, MySQL replication, DR planning, query &amp; index tuning, TDE,
+            RBAC, AWS RDS, Azure SQL, SentryOne, PMM, CloudWatch.
           </p>
         </div>
 
@@ -52,31 +64,47 @@ function AboutPage() {
           </div>
           <h3 className="mt-5 text-base font-semibold">Education</h3>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            B.Sc Mathematics &amp; MCA from{" "}
-            <span className="font-medium text-foreground">St. Joseph's College</span> (Graduated 2012).
-          </p>
-        </div>
-
-        <div className="rounded-2xl border border-border bg-card p-6 shadow-soft transition-smooth hover:-translate-y-1 hover:shadow-elegant">
-          <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-primary text-primary-foreground">
-            <Heart className="h-5 w-5" />
-          </div>
-          <h3 className="mt-5 text-base font-semibold">Passion</h3>
-          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            Database optimisation, reliability engineering, and constant learning across new RDBMS
-            features and cloud-native data platforms.
+            MCA, St. Joseph&apos;s College, Trichy (2012, 75%). B.Sc Mathematics, Periyar EVR
+            College (2009, 86%).
           </p>
         </div>
       </div>
 
       <div className="mt-14 rounded-2xl border border-border bg-surface p-8 md:p-10">
         <p className="text-lg leading-relaxed text-foreground md:text-xl">
-          “I believe a great DBA is invisible. When databases hum quietly in the background, teams
-          ship faster, customers stay happy, and finance teams get clean audit reports without a
-          single late-night call.”
+          “A great DBA is invisible. When Always On groups stay synchronized, queries return in
+          milliseconds, restores complete within RTO, and audits pass on the first cycle —
+          engineering teams ship faster and the business sleeps better.”
         </p>
         <div className="mt-5 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-          — Fernandes Reegan
+          — Fernandes Reegan · DBA Lead
+        </div>
+      </div>
+
+      <div className="mt-14 grid gap-6 md:grid-cols-2">
+        <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
+          <div className="flex items-center gap-2">
+            <Heart className="h-4 w-4 text-primary" />
+            <h3 className="text-sm font-semibold uppercase tracking-[0.18em]">Specialisations</h3>
+          </div>
+          <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+            <li>• Database Performance Engineering &amp; Query Tuning</li>
+            <li>• High Availability &amp; Disaster Recovery (Always On, FCI, Log Shipping, MySQL Replication)</li>
+            <li>• Cloud DBA — AWS RDS, Lambda, Step Functions, DataSync, CloudWatch, Azure SQL</li>
+            <li>• Database Security — TDE, RBAC, Row-Level Security, Audit Readiness</li>
+            <li>• Monitoring &amp; Observability — SentryOne, Percona PMM, CloudWatch, Grafana</li>
+          </ul>
+        </div>
+        <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="h-4 w-4 text-primary" />
+            <h3 className="text-sm font-semibold uppercase tracking-[0.18em]">Certifications</h3>
+          </div>
+          <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+            <li>• Microsoft Azure Fundamentals (AZ-900)</li>
+            <li>• IBM SkillsBuild — Machine Learning &amp; Deep Learning</li>
+            <li>• IBM SkillsBuild — Natural Language Processing &amp; Computer Vision</li>
+          </ul>
         </div>
       </div>
 
@@ -85,7 +113,8 @@ function AboutPage() {
           to="/skills"
           className="group inline-flex items-center gap-2 rounded-md bg-gradient-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-soft transition-smooth hover:shadow-elegant"
         >
-          See my skills <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+          Explore my DBA skill stack{" "}
+          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
         </Link>
       </div>
     </section>

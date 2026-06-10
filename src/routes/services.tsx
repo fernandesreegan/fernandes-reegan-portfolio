@@ -1,20 +1,20 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SectionHeader } from "../components/SectionHeader";
-import { Database, Gauge, Lightbulb, Check, ArrowRight } from "lucide-react";
+import { Database, Gauge, Lightbulb, Check, ArrowRight, Shield, Cloud, Activity } from "lucide-react";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Fernandes Reegan" },
+      { title: "Services — Fernandes Reegan | DBA Lead & Cloud DBA" },
       {
         name: "description",
         content:
-          "Database management, performance tuning, and consulting for scalable, audit-friendly relational databases.",
+          "Senior DBA services — SQL Server & MySQL administration, HA/DR, performance tuning, cloud DBA (AWS RDS, Azure SQL), security, monitoring and DBA leadership.",
       },
       { property: "og:title", content: "DBA Services — Fernandes Reegan" },
       {
         property: "og:description",
-        content: "Database management, performance tuning, and architecture consulting.",
+        content: "Database admin, HA/DR, performance, cloud DBA, security and observability.",
       },
     ],
   }),
@@ -24,21 +24,39 @@ export const Route = createFileRoute("/services")({
 const SERVICES = [
   {
     icon: Database,
-    title: "Database Management",
-    desc: "End-to-end administration of MSSQL, MySQL, and PostgreSQL — installations, upgrades, monitoring, backups, and 24×7 reliability.",
-    points: ["High-availability setup", "Backup & recovery strategy", "Patching & upgrades"],
+    title: "Database Administration",
+    desc: "End-to-end SQL Server, MySQL and PostgreSQL administration — installs, upgrades, patching, backups, capacity planning and 24×7 reliability.",
+    points: ["SQL Server & MySQL ownership", "Backup & recovery strategy", "Patching & upgrades"],
+  },
+  {
+    icon: Shield,
+    title: "High Availability & DR",
+    desc: "Design and operation of Always On Availability Groups, Failover Clustering, Log Shipping and MySQL replication — with DR drills and RTO/RPO governance.",
+    points: ["Always On AG · FCI · Mirroring", "MySQL replication topologies", "DR planning & failover validation"],
   },
   {
     icon: Gauge,
-    title: "Performance Tuning",
-    desc: "Query optimisation, index strategy, and system-level tuning to make slow workloads fast — without rewriting your application.",
-    points: ["Query & index optimisation", "Deadlock & contention analysis", "Server & storage tuning"],
+    title: "Performance Engineering",
+    desc: "Query optimisation, index tuning, execution-plan analysis, deadlock resolution and wait-stats reviews — making slow workloads fast without app rewrites.",
+    points: ["Query & index optimisation", "Deadlock & contention analysis", "Storage & server tuning"],
+  },
+  {
+    icon: Cloud,
+    title: "Cloud Database Administration",
+    desc: "AWS RDS (SQL Server / MySQL / PostgreSQL), Azure SQL, AWS Lambda, Step Functions, DataSync and CloudWatch — cloud-native, automated and observable.",
+    points: ["AWS RDS · Azure SQL", "Lambda · Step Functions · DataSync", "CloudWatch alerting"],
+  },
+  {
+    icon: Activity,
+    title: "Monitoring & Observability",
+    desc: "Standardise SentryOne, Percona PMM and CloudWatch dashboards with alerting playbooks, on-call rotations and incident-response runbooks.",
+    points: ["SentryOne · Percona PMM", "CloudWatch & Grafana", "Alerting & incident response"],
   },
   {
     icon: Lightbulb,
-    title: "Consulting",
-    desc: "Architecture and scalability guidance, audit readiness, and DBA mentorship for teams growing into serious data volumes.",
-    points: ["Scalability & architecture", "Audit-friendly automation", "Team mentoring"],
+    title: "DBA Leadership & Consulting",
+    desc: "Architecture and scalability guidance, audit readiness, security hardening (TDE, RBAC, RLS) and DBA team mentoring for organisations scaling into serious data volumes.",
+    points: ["Scalability & architecture", "Security & audit readiness", "DBA team mentoring"],
   },
 ];
 
@@ -49,10 +67,10 @@ function ServicesPage() {
         eyebrow="Services"
         title={
           <>
-            Three ways to <span className="text-gradient">work together.</span>
+            Six ways to <span className="text-gradient">work together.</span>
           </>
         }
-        description="Whether you need a steady hand on production, a tuning sprint, or strategic guidance — I bring a decade of practical, audit-ready experience."
+        description="Whether you need a senior DBA on production, an HA/DR uplift, a cloud DBA migration, or strategic leadership — I bring 13+ years of enterprise, audit-ready experience."
       />
 
       <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -85,7 +103,7 @@ function ServicesPage() {
               — Focus areas
             </div>
             <h3 className="mt-3 text-2xl font-bold tracking-tight md:text-3xl">
-              Optimised queries. Effortless scale. Audit-friendly automation.
+              Always-on databases. Tuned queries. Audit-ready security.
             </h3>
           </div>
           <div className="flex md:justify-end">
