@@ -10,6 +10,7 @@ import {
   Activity,
   CheckCircle2,
 } from "lucide-react";
+import resumeAsset from "@/assets/resume.docx.asset.json";
 const portrait = "https://i.postimg.cc/BQT4LxDY/Reegan-photo-Picsart-Ai-Image-Enhancer.jpg";
 
 export const Route = createFileRoute("/")({
