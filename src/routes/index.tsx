@@ -10,6 +10,7 @@ import {
   Activity,
   CheckCircle2,
 } from "lucide-react";
+import resumeAsset from "@/assets/resume.docx.asset.json";
 const portrait = "https://i.postimg.cc/BQT4LxDY/Reegan-photo-Picsart-Ai-Image-Enhancer.jpg";
 
 export const Route = createFileRoute("/")({
@@ -178,7 +179,8 @@ function HomePage() {
                 Contact Me
               </Link>
               <a
-                href="#"
+                href={resumeAsset.url}
+                download="Fernandes_Reegan_DBA_Lead_Resume.docx"
                 className="inline-flex items-center gap-2 rounded-md px-2 py-3 text-sm font-medium text-white/70 transition-smooth hover:text-white"
               >
                 <Download className="h-4 w-4" />
