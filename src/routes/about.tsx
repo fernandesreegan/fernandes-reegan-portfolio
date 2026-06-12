@@ -31,7 +31,7 @@ function AboutPage() {
             13+ years of <span className="text-gradient">enterprise DBA leadership.</span>
           </>
         }
-        description="Database Administrator Lead specialising in SQL Server and MySQL — performance engineering, high availability and disaster recovery, cloud database administration, security &amp; compliance, monitoring, automation, and operational excellence."
+        description="Database Administrator Lead specialising in SQL Server, MySQL and PostgreSQL — performance engineering, high availability and disaster recovery, cloud database administration, security &amp; compliance, monitoring, automation, and operational excellence."
       />
 
       <div className="mt-14 grid gap-6 md:grid-cols-3">
