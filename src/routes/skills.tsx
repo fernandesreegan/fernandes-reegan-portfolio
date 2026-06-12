@@ -46,6 +46,7 @@ const GROUPS = [
       "Database Mirroring",
       "Log Shipping",
       "MySQL Replication (Async / Semi-sync / GTID)",
+      "PostgreSQL Streaming Replication · Logical Replication · Patroni HA",
       "DR Planning · DR Testing · Failover Validation",
       "RTO / RPO Management",
     ],
