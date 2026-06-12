@@ -89,7 +89,7 @@ function AboutPage() {
           </div>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
             <li>• Database Performance Engineering &amp; Query Tuning</li>
-            <li>• High Availability &amp; Disaster Recovery (Always On, FCI, Log Shipping, MySQL Replication)</li>
+            <li>• High Availability &amp; Disaster Recovery (Always On, FCI, Log Shipping, MySQL Replication, PostgreSQL Streaming / Patroni)</li>
             <li>• Cloud DBA — AWS RDS, Lambda, Step Functions, DataSync, CloudWatch, Azure SQL</li>
             <li>• Database Security — TDE, RBAC, Row-Level Security, Audit Readiness</li>
             <li>• Monitoring &amp; Observability — SentryOne, Percona PMM, CloudWatch, Grafana</li>
