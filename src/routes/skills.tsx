@@ -132,7 +132,7 @@ function SkillsPage() {
         eyebrow="Skills"
         title={
           <>
-            Built for <span className="text-gradient">enterprise</span> SQL Server &amp; MySQL.
+            Built for <span className="text-gradient">enterprise</span> SQL Server, MySQL &amp; PostgreSQL.
           </>
         }
         description="A focused, ATS-aligned toolkit refined over 13+ years of running mission-critical relational databases under real workloads."
