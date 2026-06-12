@@ -13,7 +13,7 @@ export function SiteFooter() {
             <span className="text-base font-semibold">Fernandes Reegan</span>
           </div>
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-            Database Administrator with 10+ years of experience optimizing MSSQL, MySQL, and PostgreSQL
+            Database Administrator with 13+ years of experience optimizing SQL Server, MySQL, and PostgreSQL
             for performance, reliability, and scale.
           </p>
         </div>
