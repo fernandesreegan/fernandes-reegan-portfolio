@@ -100,7 +100,7 @@ const GROUPS = [
       "SentryOne (SolarWinds SQL Sentry)",
       "Percona Monitoring & Management (PMM)",
       "Amazon CloudWatch",
-      "SQL Server Monitoring · MySQL Monitoring",
+      "SQL Server · MySQL · PostgreSQL Monitoring",
       "Alerting & Incident Response",
     ],
   },
