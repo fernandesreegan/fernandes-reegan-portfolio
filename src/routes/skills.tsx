@@ -119,7 +119,8 @@ const GROUPS = [
 
 const STACK = [
   "SQL Server", "MySQL", "PostgreSQL", "MariaDB", "Always On AG", "FCI", "Log Shipping",
-  "MySQL Replication", "TDE", "RBAC", "AWS RDS", "AWS Lambda", "AWS Step Functions",
+  "MySQL Replication", "PostgreSQL Streaming Replication", "Patroni", "pgBouncer", "TDE", "RBAC",
+  "AWS RDS", "Amazon Aurora", "AWS Lambda", "AWS Step Functions",
   "AWS DataSync", "Amazon CloudWatch", "Azure SQL", "SentryOne", "Percona PMM", "Grafana",
   "T-SQL", "PL/pgSQL", "PowerShell", "Bash", "Linux", "Windows Server",
 ];
