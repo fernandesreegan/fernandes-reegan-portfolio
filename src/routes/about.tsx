@@ -14,7 +14,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About Fernandes Reegan — DBA Lead" },
       {
         property: "og:description",
-        content: "13+ years owning enterprise SQL Server & MySQL estates.",
+        content: "13+ years owning enterprise SQL Server, MySQL & PostgreSQL estates.",
       },
     ],
   }),
@@ -31,7 +31,7 @@ function AboutPage() {
             13+ years of <span className="text-gradient">enterprise DBA leadership.</span>
           </>
         }
-        description="Database Administrator Lead specialising in SQL Server and MySQL — performance engineering, high availability and disaster recovery, cloud database administration, security &amp; compliance, monitoring, automation, and operational excellence."
+        description="Database Administrator Lead specialising in SQL Server, MySQL and PostgreSQL — performance engineering, high availability and disaster recovery, cloud database administration, security &amp; compliance, monitoring, automation, and operational excellence."
       />
 
       <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -53,8 +53,8 @@ function AboutPage() {
           </div>
           <h3 className="mt-5 text-base font-semibold">Focus</h3>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            SQL Server Always On AG, MySQL replication, DR planning, query &amp; index tuning, TDE,
-            RBAC, AWS RDS, Azure SQL, SentryOne, PMM, CloudWatch.
+            SQL Server Always On AG, MySQL replication, PostgreSQL streaming &amp; Patroni, DR planning,
+            query &amp; index tuning, TDE, RBAC, AWS RDS / Aurora, Azure SQL, SentryOne, PMM, CloudWatch.
           </p>
         </div>
 
@@ -89,7 +89,7 @@ function AboutPage() {
           </div>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
             <li>• Database Performance Engineering &amp; Query Tuning</li>
-            <li>• High Availability &amp; Disaster Recovery (Always On, FCI, Log Shipping, MySQL Replication)</li>
+            <li>• High Availability &amp; Disaster Recovery (Always On, FCI, Log Shipping, MySQL Replication, PostgreSQL Streaming / Patroni)</li>
             <li>• Cloud DBA — AWS RDS, Lambda, Step Functions, DataSync, CloudWatch, Azure SQL</li>
             <li>• Database Security — TDE, RBAC, Row-Level Security, Audit Readiness</li>
             <li>• Monitoring &amp; Observability — SentryOne, Percona PMM, CloudWatch, Grafana</li>

@@ -9,7 +9,7 @@ export const Route = createFileRoute("/services")({
       {
         name: "description",
         content:
-          "Senior DBA services — SQL Server & MySQL administration, HA/DR, performance tuning, cloud DBA (AWS RDS, Azure SQL), security, monitoring and DBA leadership.",
+          "Senior DBA services — SQL Server, MySQL & PostgreSQL administration, HA/DR, performance tuning, cloud DBA (AWS RDS, Aurora, Azure SQL), security, monitoring and DBA leadership.",
       },
       { property: "og:title", content: "DBA Services — Fernandes Reegan" },
       {
@@ -26,13 +26,13 @@ const SERVICES = [
     icon: Database,
     title: "Database Administration",
     desc: "End-to-end SQL Server, MySQL and PostgreSQL administration — installs, upgrades, patching, backups, capacity planning and 24×7 reliability.",
-    points: ["SQL Server & MySQL ownership", "Backup & recovery strategy", "Patching & upgrades"],
+    points: ["SQL Server · MySQL · PostgreSQL ownership", "Backup & recovery strategy", "Patching & upgrades"],
   },
   {
     icon: Shield,
     title: "High Availability & DR",
-    desc: "Design and operation of Always On Availability Groups, Failover Clustering, Log Shipping and MySQL replication — with DR drills and RTO/RPO governance.",
-    points: ["Always On AG · FCI · Mirroring", "MySQL replication topologies", "DR planning & failover validation"],
+    desc: "Design and operation of Always On Availability Groups, Failover Clustering, Log Shipping, MySQL replication and PostgreSQL streaming / Patroni — with DR drills and RTO/RPO governance.",
+    points: ["Always On AG · FCI · Mirroring", "MySQL & PostgreSQL replication topologies", "DR planning & failover validation"],
   },
   {
     icon: Gauge,

@@ -16,7 +16,7 @@ const portrait = "https://i.postimg.cc/BQT4LxDY/Reegan-photo-Picsart-Ai-Image-En
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Fernandes Reegan — Database Administrator Lead | SQL Server & MySQL DBA" },
+      { title: "Fernandes Reegan — Database Administrator Lead | SQL Server, MySQL & PostgreSQL DBA" },
       {
         name: "description",
         content:
@@ -153,14 +153,14 @@ function HomePage() {
             </h1>
 
             <p className="mt-4 font-mono text-xs uppercase tracking-[0.22em] text-white/65 md:text-sm">
-              Database Administrator Lead · SQL Server · MySQL · Cloud DBA
+              Database Administrator Lead · SQL Server · MySQL · PostgreSQL · Cloud DBA
             </p>
 
             <p className="mt-6 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
               I'm <span className="font-semibold text-white">Fernandes Reegan</span> — a Database
-              Administrator Lead with <strong>13+ years</strong> running enterprise SQL Server and
-              MySQL environments. Performance tuning, HA/DR, cloud DBA, security, and 24×7
-              operational excellence.
+              Administrator Lead with <strong>13+ years</strong> running enterprise SQL Server,
+              MySQL and PostgreSQL environments. Performance tuning, HA/DR, cloud DBA, security,
+              and 24×7 operational excellence.
             </p>
 
             <div className="mt-9 flex flex-wrap gap-3">

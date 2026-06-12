@@ -8,16 +8,16 @@ import {
 export const Route = createFileRoute("/skills")({
   head: () => ({
     meta: [
-      { title: "Skills — Fernandes Reegan | Senior SQL Server & MySQL DBA" },
+      { title: "Skills — Fernandes Reegan | Senior SQL Server, MySQL & PostgreSQL DBA" },
       {
         name: "description",
         content:
-          "Enterprise DBA skills: Always On AG, failover clustering, MySQL replication, query tuning, TDE, RBAC, AWS RDS, Azure SQL, SentryOne, PMM, CloudWatch.",
+          "Enterprise DBA skills across SQL Server, MySQL & PostgreSQL: Always On AG, failover clustering, replication, query tuning, TDE, RBAC, AWS RDS, Azure SQL, SentryOne, PMM, CloudWatch.",
       },
-      { property: "og:title", content: "DBA Skills — Fernandes Reegan" },
+      { property: "og:title", content: "Skills — Senior SQL Server, MySQL & PostgreSQL DBA" },
       {
         property: "og:description",
-        content: "SQL Server · MySQL · HA/DR · Cloud DBA · Security · Monitoring.",
+        content: "SQL Server · MySQL · PostgreSQL · HA/DR · Cloud DBA · Security · Monitoring.",
       },
     ],
   }),
@@ -26,7 +26,7 @@ export const Route = createFileRoute("/skills")({
 
 const CORE = [
   { icon: Search, name: "Query Optimization & Index Tuning", level: 96, note: "Execution plans, wait stats, deadlock resolution" },
-  { icon: Database, name: "SQL Server & MySQL Administration", level: 96, note: "Install · configure · patch · upgrade" },
+  { icon: Database, name: "SQL Server · MySQL · PostgreSQL Administration", level: 96, note: "Install · configure · patch · upgrade" },
   { icon: Shield, name: "HA/DR — Always On, FCI, Replication", level: 94, note: "RTO/RPO management, DR drills, failover validation" },
   { icon: Gauge, name: "Performance Engineering", level: 94, note: "T-SQL tuning, partitioning, statistics" },
   { icon: HardDriveDownload, name: "Backup & Recovery", level: 95, note: "PITR · parallel restore · log shipping" },
@@ -46,6 +46,7 @@ const GROUPS = [
       "Database Mirroring",
       "Log Shipping",
       "MySQL Replication (Async / Semi-sync / GTID)",
+      "PostgreSQL Streaming Replication · Logical Replication · Patroni HA",
       "DR Planning · DR Testing · Failover Validation",
       "RTO / RPO Management",
     ],
@@ -99,7 +100,7 @@ const GROUPS = [
       "SentryOne (SolarWinds SQL Sentry)",
       "Percona Monitoring & Management (PMM)",
       "Amazon CloudWatch",
-      "SQL Server Monitoring · MySQL Monitoring",
+      "SQL Server · MySQL · PostgreSQL Monitoring",
       "Alerting & Incident Response",
     ],
   },
@@ -118,7 +119,8 @@ const GROUPS = [
 
 const STACK = [
   "SQL Server", "MySQL", "PostgreSQL", "MariaDB", "Always On AG", "FCI", "Log Shipping",
-  "MySQL Replication", "TDE", "RBAC", "AWS RDS", "AWS Lambda", "AWS Step Functions",
+  "MySQL Replication", "PostgreSQL Streaming Replication", "Patroni", "pgBouncer", "TDE", "RBAC",
+  "AWS RDS", "Amazon Aurora", "AWS Lambda", "AWS Step Functions",
   "AWS DataSync", "Amazon CloudWatch", "Azure SQL", "SentryOne", "Percona PMM", "Grafana",
   "T-SQL", "PL/pgSQL", "PowerShell", "Bash", "Linux", "Windows Server",
 ];
@@ -130,7 +132,7 @@ function SkillsPage() {
         eyebrow="Skills"
         title={
           <>
-            Built for <span className="text-gradient">enterprise</span> SQL Server &amp; MySQL.
+            Built for <span className="text-gradient">enterprise</span> SQL Server, MySQL &amp; PostgreSQL.
           </>
         }
         description="A focused, ATS-aligned toolkit refined over 13+ years of running mission-critical relational databases under real workloads."
