@@ -9,7 +9,7 @@ export const Route = createFileRoute("/services")({
       {
         name: "description",
         content:
-          "Senior DBA services — SQL Server & MySQL administration, HA/DR, performance tuning, cloud DBA (AWS RDS, Azure SQL), security, monitoring and DBA leadership.",
+          "Senior DBA services — SQL Server, MySQL & PostgreSQL administration, HA/DR, performance tuning, cloud DBA (AWS RDS, Aurora, Azure SQL), security, monitoring and DBA leadership.",
       },
       { property: "og:title", content: "DBA Services — Fernandes Reegan" },
       {
