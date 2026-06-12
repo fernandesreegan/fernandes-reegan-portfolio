@@ -53,8 +53,8 @@ function AboutPage() {
           </div>
           <h3 className="mt-5 text-base font-semibold">Focus</h3>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            SQL Server Always On AG, MySQL replication, DR planning, query &amp; index tuning, TDE,
-            RBAC, AWS RDS, Azure SQL, SentryOne, PMM, CloudWatch.
+            SQL Server Always On AG, MySQL replication, PostgreSQL streaming &amp; Patroni, DR planning,
+            query &amp; index tuning, TDE, RBAC, AWS RDS / Aurora, Azure SQL, SentryOne, PMM, CloudWatch.
           </p>
         </div>
 
