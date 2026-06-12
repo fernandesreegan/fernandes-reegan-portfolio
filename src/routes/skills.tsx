@@ -26,7 +26,7 @@ export const Route = createFileRoute("/skills")({
 
 const CORE = [
   { icon: Search, name: "Query Optimization & Index Tuning", level: 96, note: "Execution plans, wait stats, deadlock resolution" },
-  { icon: Database, name: "SQL Server & MySQL Administration", level: 96, note: "Install · configure · patch · upgrade" },
+  { icon: Database, name: "SQL Server · MySQL · PostgreSQL Administration", level: 96, note: "Install · configure · patch · upgrade" },
   { icon: Shield, name: "HA/DR — Always On, FCI, Replication", level: 94, note: "RTO/RPO management, DR drills, failover validation" },
   { icon: Gauge, name: "Performance Engineering", level: 94, note: "T-SQL tuning, partitioning, statistics" },
   { icon: HardDriveDownload, name: "Backup & Recovery", level: 95, note: "PITR · parallel restore · log shipping" },
