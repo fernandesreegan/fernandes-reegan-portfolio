@@ -8,16 +8,16 @@ import {
 export const Route = createFileRoute("/skills")({
   head: () => ({
     meta: [
-      { title: "Skills — Fernandes Reegan | Senior SQL Server & MySQL DBA" },
+      { title: "Skills — Fernandes Reegan | Senior SQL Server, MySQL & PostgreSQL DBA" },
       {
         name: "description",
         content:
-          "Enterprise DBA skills: Always On AG, failover clustering, MySQL replication, query tuning, TDE, RBAC, AWS RDS, Azure SQL, SentryOne, PMM, CloudWatch.",
+          "Enterprise DBA skills across SQL Server, MySQL & PostgreSQL: Always On AG, failover clustering, replication, query tuning, TDE, RBAC, AWS RDS, Azure SQL, SentryOne, PMM, CloudWatch.",
       },
-      { property: "og:title", content: "DBA Skills — Fernandes Reegan" },
+      { property: "og:title", content: "Skills — Senior SQL Server, MySQL & PostgreSQL DBA" },
       {
         property: "og:description",
-        content: "SQL Server · MySQL · HA/DR · Cloud DBA · Security · Monitoring.",
+        content: "SQL Server · MySQL · PostgreSQL · HA/DR · Cloud DBA · Security · Monitoring.",
       },
     ],
   }),
