@@ -16,7 +16,7 @@ const portrait = "https://i.postimg.cc/BQT4LxDY/Reegan-photo-Picsart-Ai-Image-En
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Fernandes Reegan — Database Administrator Lead | SQL Server & MySQL DBA" },
+      { title: "Fernandes Reegan — Database Administrator Lead | SQL Server, MySQL & PostgreSQL DBA" },
       {
         name: "description",
         content:
