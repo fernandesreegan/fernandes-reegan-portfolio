@@ -14,7 +14,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About Fernandes Reegan — DBA Lead" },
       {
         property: "og:description",
-        content: "13+ years owning enterprise SQL Server & MySQL estates.",
+        content: "13+ years owning enterprise SQL Server, MySQL & PostgreSQL estates.",
       },
     ],
   }),
